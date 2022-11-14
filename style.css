@@ -12,6 +12,10 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
 }
 
 .grid:nth-child(-n + 3) {
@@ -31,11 +35,11 @@
 }
 
 .x::after {
-    content: 'X';
+    content: '❌';
 }
 
 .o::after {
-    content: 'O';
+    content: '⭕';
 }
 
 .grid {
@@ -63,5 +67,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: rgb(0 0 0 /50%, green, blue);
+    box-shadow: rgb(0 0 0 /50%,) 0 0 0 9999px;
+}
+
+.game-over-text {
+    position: absolute;
+    top: -200px;
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    transform: translateX(-30%);
+}
+
+.visible {
+    display: block;
 }
